@@ -1,4 +1,5 @@
-﻿//Console.WriteLine("Write something: ");
+﻿//liczenie ile liter występuje we wpisanym tekscie
+//Console.WriteLine("Write something: ");
 //string text = Console.ReadLine();
 //text = text.ToLower();
 
@@ -15,36 +16,72 @@
 //    Console.WriteLine(keyValuePair);
 //}
 
-using Exercises;
 
-Console.WriteLine("FarToCel [F] or CelToFar [C]");
-var userAnswer = Console.ReadLine();
-var degree = new DegreeCounter();
-if (userAnswer == "f" || userAnswer == "F")
+
+//zamiana celciusz na farenhajt
+//using Exercises;
+
+//Console.WriteLine("FarToCel [F] or CelToFar [C]");
+//var userAnswer = Console.ReadLine();
+//var degree = new DegreeCounter();
+//if (userAnswer == "f" || userAnswer == "F")
+//{
+//    Console.WriteLine("How much Farenhait degree you want convert to Celcius?: ");
+//    var degreeFromUser = Console.ReadLine();
+//    try
+//    {
+//        degree.FarToCel(degreeFromUser);
+//    }
+//    catch (Exception e)
+//    { 
+//        Console.WriteLine(e.Message);
+//    }
+//    Console.WriteLine($"It is: {degree.Degree} Celcius degree");
+//}
+//else if (userAnswer == "c" || userAnswer == "C")
+//{
+//    Console.WriteLine("How much Celcius degree you want convert to Farenhait?: ");
+//    var degreeFromUser = Console.ReadLine();
+//    try
+//    {
+//        degree.CelToFar(degreeFromUser);
+//    }
+//    catch (Exception e)
+//    {
+//        Console.WriteLine(e.Message);
+//    }
+//    Console.WriteLine($"It is: {degree.Degree} Farenhait degree");
+//}
+
+
+Console.WriteLine("Write 3 numbers, then I saw you max of them");
+List<float> numbers = new List<float>();
+
+int i = 0;
+int countMax = 0;
+while (i < 3)
 {
-    Console.WriteLine("How much Farenhait degree you want convert to Celcius?: ");
-    var degreeFromUser = Console.ReadLine();
-    try
+    Console.Write("Write number: ");
+    var number = Console.ReadLine();
+    if (float.TryParse(number, out float result))
     {
-        degree.FarToCel(degreeFromUser);
+        numbers.Add(result);
+        i++;
     }
-    catch (Exception e)
-    { 
-        Console.WriteLine(e.Message);
+    else 
+    {
+        Console.WriteLine("This is not float");
     }
-    Console.WriteLine($"It is: {degree.Degree} Celcius degree");
 }
-else if (userAnswer == "c" || userAnswer == "C")
+
+int maxCounter = 0;
+foreach (var number in numbers)
 {
-    Console.WriteLine("How much Celcius degree you want convert to Farenhait?: ");
-    var degreeFromUser = Console.ReadLine();
-    try
+    if (number == numbers.Max())
     {
-        degree.CelToFar(degreeFromUser);
+        maxCounter++;
     }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
-    Console.WriteLine($"It is: {degree.Degree} Farenhait degree");
 }
+
+var maximum = numbers.Max();
+Console.WriteLine($"Your max is: {maximum}, you write it: {maxCounter} times");
