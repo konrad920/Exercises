@@ -54,34 +54,54 @@
 //}
 
 
-Console.WriteLine("Write 3 numbers, then I saw you max of them");
-List<float> numbers = new List<float>();
+//Console.WriteLine("Write 3 numbers, then I saw you max of them");
+//List<float> numbers = new List<float>();
 
-int i = 0;
-int countMax = 0;
-while (i < 3)
+//int i = 0;
+//int countMax = 0;
+//while (i < 3)
+//{
+//    Console.Write("Write number: ");
+//    var number = Console.ReadLine();
+//    if (float.TryParse(number, out float result))
+//    {
+//        numbers.Add(result);
+//        i++;
+//    }
+//    else 
+//    {
+//        Console.WriteLine("This is not float");
+//    }
+//}
+
+//int maxCounter = 0;
+//foreach (var number in numbers)
+//{
+//    if (number == numbers.Max())
+//    {
+//        maxCounter++;
+//    }
+//}
+
+//var maximum = numbers.Max();
+//Console.WriteLine($"Your max is: {maximum}, you write it: {maxCounter} times");
+
+using System;
+using Exercises;
+
+//var item = new MergeNames();
+//item.Main
+//
+
+
+BinaryGap binaryGap = new BinaryGap();
+//Dictionary<int, int> score = binaryGap.FindBinaryGap(8);
+try
 {
-    Console.Write("Write number: ");
-    var number = Console.ReadLine();
-    if (float.TryParse(number, out float result))
-    {
-        numbers.Add(result);
-        i++;
-    }
-    else 
-    {
-        Console.WriteLine("This is not float");
-    }
+    Console.WriteLine(binaryGap.FindBinaryGapDictionary(11));
+}
+catch (Exception e)
+{
+    Console.WriteLine($"Exception catched: {e.Message}");
 }
 
-int maxCounter = 0;
-foreach (var number in numbers)
-{
-    if (number == numbers.Max())
-    {
-        maxCounter++;
-    }
-}
-
-var maximum = numbers.Max();
-Console.WriteLine($"Your max is: {maximum}, you write it: {maxCounter} times");
