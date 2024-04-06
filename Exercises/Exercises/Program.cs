@@ -1,4 +1,8 @@
-﻿//liczenie ile liter występuje we wpisanym tekscie
+﻿using System;
+using Exercises;
+
+
+//liczenie ile liter występuje we wpisanym tekscie
 //Console.WriteLine("Write something: ");
 //string text = Console.ReadLine();
 //text = text.ToLower();
@@ -19,7 +23,6 @@
 
 
 //zamiana celciusz na farenhajt
-//using Exercises;
 
 //Console.WriteLine("FarToCel [F] or CelToFar [C]");
 //var userAnswer = Console.ReadLine();
@@ -54,6 +57,7 @@
 //}
 
 
+//wybor maksymalnej liczby z 3 podanych
 //Console.WriteLine("Write 3 numbers, then I saw you max of them");
 //List<float> numbers = new List<float>();
 
@@ -86,22 +90,23 @@
 //var maximum = numbers.Max();
 //Console.WriteLine($"Your max is: {maximum}, you write it: {maxCounter} times");
 
-using System;
-using Exercises;
-
-//var item = new MergeNames();
-//item.Main
-//
 
 
-BinaryGap binaryGap = new BinaryGap();
+
+//Binary Gap
+//BinaryGap binaryGap = new BinaryGap();
 //Dictionary<int, int> score = binaryGap.FindBinaryGap(8);
-try
-{
-    Console.WriteLine(binaryGap.FindBinaryGapDictionary(11));
-}
-catch (Exception e)
-{
-    Console.WriteLine($"Exception catched: {e.Message}");
-}
+//try
+//{
+//    Console.WriteLine(binaryGap.FindBinaryGapDictionary(1054));
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine($"Exception catched: {e.Message}");
+//}
 
+
+//JewelinsAndStones
+JewelinsAndStones jewelinsAndStones = new JewelinsAndStones();
+var score = jewelinsAndStones.CountJewelsInStones("zxa", "abghGFCcAAaC");
+Console.WriteLine(score);
