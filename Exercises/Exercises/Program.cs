@@ -107,6 +107,11 @@ using Exercises;
 
 
 //JewelinsAndStones
-JewelinsAndStones jewelinsAndStones = new JewelinsAndStones();
-var score = jewelinsAndStones.CountJewelsInStones("zxa", "abghGFCcAAaC");
+//JewelinsAndStones jewelinsAndStones = new JewelinsAndStones();
+//var score = jewelinsAndStones.CountJewelsInStones("zxa", "abghGFCcAAaC");
+//Console.WriteLine(score);
+
+//Pangram
+Pangram pangram = new Pangram();
+var score = pangram.IsPangram("The quick brown fox jumps over the lazy dog");
 Console.WriteLine(score);
